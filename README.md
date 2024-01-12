@@ -57,10 +57,15 @@ We'll build up our Flask application from a few models and views that are ready
 to go. Run these commands to install the dependencies and set up the database:
 
 ```console
-$ pipenv install; pipenv shell
-$ cd server
-$ flask db upgrade
-$ python seed.py
+ pipenv install; pipenv shell
+ cd server
+ cd app
+ export FLASK_APP=app.py
+ export FLASK_RUN_PORT=5555
+ flask db upgrade
+ python seed.py
+flask db upgrade$
+ python seed.py
 ```
 
 You can view the models in the `server/models.py` module, and the migrations in the

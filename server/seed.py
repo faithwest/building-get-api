@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
 from random import randint, choice as rc
-
+from app import app
 from faker import Faker
 
-from app import app
 from models import db, Game, Review, User
 
 genres = [
@@ -108,3 +107,10 @@ with app.app_context():
         reviews.remove(r)
 
     db.session.commit()
+
+
+if __name__ =='__main__':
+    with app.app_context():
+        print("Seeding started -----")
+        print("Seeded successfully")
+
