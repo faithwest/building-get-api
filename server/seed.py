@@ -111,6 +111,5 @@ with app.app_context():
 
 if __name__ =='__main__':
     with app.app_context():
-        print("Seeding started -----")
         print("Seeded successfully")
 
